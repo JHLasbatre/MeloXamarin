@@ -6,29 +6,33 @@ using System.Threading.Tasks;
 
 namespace PROJET_Melo
 {
-    class PersonnePhysique:Broadcaster
+    class PersonnePhysique : Broadcaster
     {
+
         //Attributs
-        private int range;
 
         //Constructeur
-        public PersonnePhysique(int range, string pseudo, ClientRC clientData) : base(clientData, pseudo)
+        public PersonnePhysique(ClientRC clientData, string pseudo, int userLikes) : base(clientData, pseudo, userLikes)
         {
-            this.range = range;
+
         }
+
 
         //Méthodes
-        public int Range
+        public override string ToString()
         {
-            get
-            {
-                return range;
-            }
-
-            set
-            {
-                range = value;
-            }
+            return base.ToString();
         }
+        public void PlayBroadcasintSong()
+        {
+
+        }
+
+        public void AddLike(Broadcaster b)
+        {
+            b.UserLikes
+        }
+
+        public void Unlike
     }
 }

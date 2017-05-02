@@ -11,26 +11,20 @@ namespace PROJET_Melo
         //Attributs
         private ClientRC clientData;
         private string pseudo;
+        private int userLikes;
 
-        //Constructeurs
-        public Broadcaster(ClientRC clientData, string pseudo)
+        public Broadcaster(ClientRC clientData, string pseudo, int userLikes)
         {
-            this.pseudo = pseudo;
-            this.clientData = clientData;
-        }
+            this.ClientData = clientData;
+            this.Pseudo = pseudo;
 
-        //Méthodes
-        public ClientRC ClientData
-        {
-            get
-            {
-                return clientData;
-            }
-
-            set
-            {
-                clientData = value;
-            }
+/* Modification non fusionnée à partir du projet 'MeloXamarin.iOS'
+Avant :
+            this.userLikes = userLikes;
+Après :
+            this.UserLikes = userLikes;
+*/
+            this.UserLikes = userLikes;
         }
 
         public string Pseudo
@@ -45,5 +39,37 @@ namespace PROJET_Melo
                 pseudo = value;
             }
         }
+
+        public int UserLikes
+        {
+            get
+            {
+                return userLikes;
+            }
+
+            set
+            {
+                userLikes = value;
+            }
+        }
+
+        internal ClientRC ClientData
+        {
+            get
+            {
+                return clientData;
+            }
+
+            set
+            {
+                clientData = value;
+            }
+        }
+
+        //Constructeurs
+
+
+        //Méthodes
+
     }
 }
